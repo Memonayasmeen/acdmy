@@ -13,23 +13,32 @@
 
 
 <!-- Navbar -->
+<nav id="navbar" class="bg-white shadow-md z-50 static md:sticky md:top-0">
 
-<nav class="bg-white shadow-md p-4 sticky top-0">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
-<a href="index.html">
-        <div class="flex items-center gap-3">
-            <img src="gallery/logo.jpeg" class="w-16 h-16">
-            <h1 class=" font-bold">
-                Amaze <br> Science Academy
-            </h1>
-        </div>
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center p-4">
+
+        <!-- Logo -->
+        <a href="index.html" id="logo">
+            <div class="flex items-center gap-3">
+                <img src="gallery/logo.jpeg" class="w-16 h-16" alt="Logo">
+
+                <h1 class="font-bold">
+                    Amaze <br> Science Academy
+                </h1>
+            </div>
         </a>
 
-        <button id="menuBtn" class="md:hidden text-3xl">
+        <!-- Mobile Button -->
+        <button id="menuBtn"
+            class="md:hidden text-3xl"
+            aria-label="Toggle Menu"
+            aria-expanded="false">
             ☰
         </button>
 
-        <div id="menu" class="hidden md:flex flex-col md:flex-row gap-4 items-center font-semibold">
+        <!-- Navigation Links -->
+        <div id="menu"
+            class="hidden md:flex flex-col md:flex-row items-center justify-center text-center gap-4 font-semibold w-full md:w-auto py-5 md:py-0">
 
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -37,20 +46,24 @@
             <a href="teachers.html">Our Teachers</a>
             <a href="services.html">Services</a>
             <a href="fee.html">Fee & Calculator</a>
-            <a href="contact.html"#admission>Admission</a>
+            <a href="contact.html#admission">Admission</a>
             <a href="contact.html#contact">Contact</a>
 
-            <a href="login.html" class="bg-blue-950 text-white px-5 py-2 rounded-full">
+            <a href="login.html"
+                class="bg-blue-950 text-white px-5 py-2 rounded-full">
                 Login
             </a>
 
-            <a href="register.html" class="bg-yellow-400 px-5 py-2 rounded-full">
+            <a href="register.html"
+                class="bg-yellow-400 px-5 py-2 rounded-full">
                 Register
             </a>
 
         </div>
+
     </div>
-</nav>
+</nav>  
+
 
 
 <section class="rounded-2xl overflow-hidden min-h-56 flex items-center text-white"

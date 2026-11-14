@@ -1,11 +1,45 @@
 let menu = document.getElementById("menu");
 let menuBtn = document.getElementById("menuBtn");
+let logo = document.getElementById("logo");
 
-menuBtn.addEventListener("click", function() {
+// Mobile Menu Open and Close
+menuBtn.addEventListener("click", function () {
+
     menu.classList.toggle("hidden");
     menu.classList.toggle("flex");
+
+    let isOpen = !menu.classList.contains("hidden");
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
+
+    if (isOpen) {
+        logo.classList.add("hidden");
+        menuBtn.textContent = "×";
+    } else {
+        logo.classList.remove("hidden");
+        menuBtn.textContent = "☰";
+    }
+
 });
 
+// Close Menu After Clicking Link
+let links = menu.querySelectorAll("a");
+
+links.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        menu.classList.add("hidden");
+        menu.classList.remove("flex");
+
+        logo.classList.remove("hidden");
+        menuBtn.textContent = "☰";
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+    });
+
+});
 
 let images = [
     "gallery/bg-img1.jpg",
